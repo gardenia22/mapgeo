@@ -3,7 +3,7 @@ require "uri"
 require "json"
     #如果有GET请求参数直接写在URI地址中  
 def sendquest(query)
-    uri = URI::escape('http://api.map.baidu.com/place/v2/search?ak=9784f96333e30ca4402d25fc4233705a&output=json&query='+query+'&page_size=1&page_num=0&scope=2&region=北京')
+    uri = URI::escape('http://api.map.baidu.com/place/v2/search?ak=YourKey&output=json&query='+query+'&page_size=1&page_num=0&scope=2&region=北京')
     html_response = nil 
     open(uri) do |http|  
       html_response = http.read  
